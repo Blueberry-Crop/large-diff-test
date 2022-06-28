@@ -1,7 +1,9 @@
 prefix=$1
 files=$2
 
-for i in {0..$files}
+i=1
+while [ $i -le $files ]
 do
     echo Hello world! > "$prefix-$i.txt"
+    i=$(( i+1 ))
 done
